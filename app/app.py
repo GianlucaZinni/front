@@ -1,9 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
-from datetime import datetime
-from hashlib import sha256
-import json
 import requests
+import json
 
 class VotingApp:
     def __init__(self, root):
@@ -22,24 +20,13 @@ class VotingApp:
         self.view_button = tk.Button(self.root, text="View Blockchain", command=self.view_blockchain)
         self.view_button.pack()
         
-        self.api_url = "http://localhost:8000"  # URL of voting-core API
+        self.api_url = "http://localhost:8000"  # URL of API
         
     def vote(self):
-        # (Simulated voting logic)
-        candidate = "Candidato A"
-        sender = "Nombre"
-        recipient = candidate
-        amount = 1
-
-        # Create a new transaction
-        transaction = {
-            'sender': sender,
-            'recipient': recipient,
-            'amount': amount,
-        }
+        candidate = "Candidate A"
         
-        # Send the transaction to the blockchain core API
-        response = requests.post(f"{self.api_url}/vote", json=transaction)
+        # Send the vote request to the API
+        response = requests.post(f"{self.api_url}/vote?candidate={candidate}")
         
         if response.status_code == 200:
             messagebox.showinfo("Success", "Vote recorded and block mined!")
@@ -47,7 +34,7 @@ class VotingApp:
             messagebox.showerror("Error", "Failed to record vote.")
     
     def view_blockchain(self):
-        # Fetch and display the blockchain data from the blockchain core API
+        # Fetch and display the blockchain data from the API
         response = requests.get(f"{self.api_url}/chain")
         
         if response.status_code == 200:
