@@ -1,0 +1,9 @@
+.fullScreenContainer {
+    display: flex;
+    justify-content: center; /* Centrado en dirección X */
+    align-items: center;     /* Centrado en dirección Y */
+    height: 100vh;           /* Ocupa toda la altura de la vista del usuario */
+    width: 100%;             /* Ocupa todo el ancho */
+    background-color: rgb(220, 238, 253); /* Color de fondo */
+  }
+  
