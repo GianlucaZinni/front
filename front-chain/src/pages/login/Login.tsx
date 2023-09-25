@@ -37,7 +37,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess, onLoginFailure, endpoint 
         <Paper elevation={8} style={{ padding: '20px', backgroundColor: 'white' }}>
           <Box display="flex" flexDirection="column" alignItems="center">
             <Typography variant="h4" gutterBottom>
-              Login
+              Loguearse
             </Typography>
             <TextField
               fullWidth
@@ -63,7 +63,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess, onLoginFailure, endpoint 
                 onClick={handleLogin}
                 disabled={loading}
               >
-                Login
+                Iniciar Sesion
               </Button>
             </Box>
           </Box>
