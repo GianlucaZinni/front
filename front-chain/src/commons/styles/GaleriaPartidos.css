@@ -7,19 +7,35 @@
 
 .tarjeta {
   display: inline-block;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
+  border-radius: 0.5cm;
   padding: 8px;
   cursor: pointer;
   transition: border-color 0.3s;
 }
   
-  .tarjeta.seleccionado {
-    border-color: gold;
-  }
+.tarjeta.seleccionado {
+  border-color: gold;
+}
+
+.voleta{
+  height: 500px;
+}
   
-  button {
-    margin-top: 16px;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-  
+.btn-send {
+  margin-top: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+}
+.btn-send:hover{
+  background: linear-gradient(45deg, #cd6bfe 30%, #5361ff 90%);
+}
+
+h2{
+  text-align: center;
+}

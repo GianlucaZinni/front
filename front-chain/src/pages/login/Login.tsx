@@ -56,6 +56,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess, onLoginFailure, endpoint 
             />
             <Box mt={2}>
               <Button
+                className='btn'
                 fullWidth
                 variant="contained"
                 color="primary"

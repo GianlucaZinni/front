@@ -24,12 +24,15 @@ const GaleriaPartidos: React.FC<GaleriaPartidosProps> = ({ partidos, onVotar }) 
             className={`tarjeta ${partidoSeleccionado === partido.id ? 'seleccionado' : ''}`}
             onClick={() => setPartidoSeleccionado(partido.id)}
           >
-            <img src={partido.imagenUrl} alt={partido.nombre} />
-            <p>{partido.nombre}</p>
+            <img className="voleta" src={partido.imagenUrl} alt={partido.nombre} />
+            <h2>{partido.nombre}</h2>
           </div>
         ))}
       </div>
-      <button onClick={() => onVotar(partidoSeleccionado!)}>VOTAR</button>
+      <button 
+      className='btn-send'
+      onClick={() => onVotar(partidoSeleccionado!)}
+      >VOTAR</button>
     </div>
   );
 };
