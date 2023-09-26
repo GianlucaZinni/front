@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import '../../commons/styles/GaleriaPartidos.css';
+import IconButton from '@material-ui/core/IconButton';
+import AppsIcon from '@material-ui/icons/Apps';
+import ListIcon from '@material-ui/icons/List';
 
 interface PartidoPolitico {
   id: number;
@@ -14,10 +17,20 @@ interface GaleriaPartidosProps {
 
 const GaleriaPartidos: React.FC<GaleriaPartidosProps> = ({ partidos, onVotar }) => {
   const [partidoSeleccionado, setPartidoSeleccionado] = useState<number | null>(null);
+  const [modoGrilla, setModoGrilla] = useState<boolean>(false);
 
   return (
     <div>
-      <div className="galeria">
+      <div className="switcher">
+        <div className="rail" onClick={() => setModoGrilla(!modoGrilla)}>
+          <div className={`slider ${modoGrilla ? 'grilla' : 'lista'}`}>
+            {modoGrilla ? <AppsIcon /> : <ListIcon />}
+          </div>
+        </div>  
+      </div>
+
+
+      <div className={`galeria ${modoGrilla ? 'grilla' : ''}`}>
         {partidos.map(partido => (
           <div
             key={partido.id}

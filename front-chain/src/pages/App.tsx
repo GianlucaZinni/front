@@ -29,6 +29,7 @@ function App() {
                   { id: 1, nombre: 'Milei', imagenUrl: '/images/milei.jpg' }, // Necesito acceder a milei.jpg que esta en la carpeta assets/images desde el componente App.tsx que esta en la carpeta src/pages
                   { id: 2, nombre: 'Bullrich', imagenUrl: '/images/bullrich.jpg' },
                   { id: 3, nombre: 'Larreta', imagenUrl: '/images/massa.jpg' },
+                  { id: 4, nombre: 'Del Caño', imagenUrl: '/images/delCaño.jpg' },
                   // ... otros partidos
                 ]}
                 onVotar={partidoId => {
