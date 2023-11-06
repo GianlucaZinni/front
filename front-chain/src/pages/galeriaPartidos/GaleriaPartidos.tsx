@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import '../../commons/styles/GaleriaPartidos.css';
-import IconButton from '@material-ui/core/IconButton';
-import AppsIcon from '@material-ui/icons/Apps';
-import ListIcon from '@material-ui/icons/List';
+import IconButton from '@mui/material/IconButton';
+import AppsIcon from '@mui/icons-material/Apps';
+import ListIcon from '@mui/icons-material/List';
 
 interface PartidoPolitico {
   id: number;

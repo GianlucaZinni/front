@@ -3,26 +3,16 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./login/Login";
 import '../commons/styles/App.css';
 import GaleriaPartidos from "./galeriaPartidos/GaleriaPartidos";
+import Register from "./register/Register";
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="App-header">
           <Routes>
-            <Route path="/" element={
-              <Login 
-                endpoint="https://tu-backend.com/api/login"
-                onLoginSuccess={token => console.log("Logged in with token:", token)}
-                onLoginFailure={error => console.error("Login failed:", error)}
-              /> 
-            }/>
-            <Route path="/login" element={
-              <Login 
-                endpoint="https://tu-backend.com/api/login"
-                onLoginSuccess={token => console.log("Logged in with token:", token)}
-                onLoginFailure={error => console.error("Login failed:", error)}
-              /> 
-            }/>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
             <Route path="/vote" element={
               <GaleriaPartidos 
                 partidos={[
